@@ -1,0 +1,25 @@
+{{#if shortURL}}
+  <div class="result">
+    <h2>Please use this link :</h2>
+    <p id="generatedURL" class="shortUrl">{{origin}}/{{shortURL}}</p>
+  </div>
+  <div class="button">
+    <button class="copy" onclick="copy()">Copy</button>
+    <form action="/"><button class="back">Back</button></form>
+  </div>
+  <script>
+    function copy () {
+      const URL = document.getElementById('generatedURL')
+      navigator.clipboard.writeText(URL.innerText)
+        .then(() => alert('copied'))
+        .catch(error => console.log(error))
+    }
+  </script>
+{{else}}
+  <form action="/" method="post">
+    <div class="container">
+      <input type="url" name="url" placeholder="Input URL here" required />
+      <button class="shortener" type="submit">Shorten</button>
+    </div>
+  </form>
+{{/if}}
