@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 //載入mongoose連線
-require('./confing/mongoose')
+require('./config/mongoose')
 const routes = require('./routes')
 
 const  app = express()
