@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
 
 router.get("/:shortURL", (req, res) => {
   const { shortURL } = req.params
-
+  console.log(req.headers)
   URL.findOne({ shortURL })
     .then(data => {
       if (!data) {

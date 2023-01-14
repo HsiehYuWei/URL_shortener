@@ -65,3 +65,13 @@ button.back {
   color: #ffffff;
   padding: 0.5rem;
 }
+
+.error {
+    width: 50%;
+    text-align: center;
+    background-color: salmon;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 0;
+}
